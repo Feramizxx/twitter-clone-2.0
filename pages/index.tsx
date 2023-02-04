@@ -2,7 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "@next/font/google";
 import styles from "@/styles/Home.module.css";
-import { GetServerSideProps } from "next";
+import { GetStaticProps } from "next";
 import Feed from "../components/Feed";
 import SideBar from "../components/SideBar";
 import Widgets from "../components/Widgets";
@@ -34,8 +34,8 @@ export default function Home({tweets}: Props) {
   );
 }
 
-export const getServerSideProps: GetServerSideProps = async(context) => {
-const tweets=await fetchTweets()
+export const getStaticProps: GetStaticProps = async(context) => {
+const tweets = await fetchTweets()
   return{
     props:{tweets}
   }
