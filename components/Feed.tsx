@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import TweetBox from "./TweetBox";
 import { ArrowPathIcon } from "@heroicons/react/24/outline";
 import { Tweet } from "@/typing";
-import tweet from "@/twitter-sanity/schemas/tweet";
 import TweetComponent from "./TweetComponent";
 import { fetchTweets } from "@/utils/fetchTweets";
 import toast from "react-hot-toast";
@@ -35,7 +34,6 @@ function Feed({ tweets: tweetProps }: Props) {
         <TweetBox setTweets={setTweets}/>
       </div>
 
-      {/* tweet */}
 
       {tweets.map((tweet) => {
         return <TweetComponent key={tweet._id} tweet={tweet} />;

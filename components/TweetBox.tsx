@@ -1,6 +1,5 @@
 import React, { useState, useRef } from "react";
-import Image from "next/image";
-import { useSession, signIn, signOut } from "next-auth/react";
+import { useSession } from "next-auth/react";
 import { Tweet } from "@/typing";
 import { toast } from "react-hot-toast";
 import {
@@ -20,7 +19,6 @@ function TweetBox({ setTweets }: Props) {
   const [inputValue, setInputValue] = useState<string>("");
   const [imagePopUpIsVisible, setImagePopUpIsVisible] =
     useState<boolean>(false);
-  console.log(inputValue);
   const imageInputRef = useRef<HTMLInputElement>(null);
   const { data: session } = useSession();
   const [image, setImage] = useState<string>("");

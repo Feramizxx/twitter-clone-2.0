@@ -52,7 +52,7 @@ function TweetComponent({ tweet }: Props) {
     return json;
   };
 
-  console.log(comments)
+
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     postComment();
