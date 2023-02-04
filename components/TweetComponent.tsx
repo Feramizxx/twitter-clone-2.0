@@ -64,7 +64,7 @@ function TweetComponent({ tweet }: Props) {
       <div className="flex space-x-3">
         <img
           className="rounded-full object-cover h-10 w-10 "
-          src={session?.user?.image || "Unknown user"}
+          src={session?.user?.image || "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"}
           alt={session?.user?.name|| "User"}
         />
 
